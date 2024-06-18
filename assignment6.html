@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="jquery-3.6.0.min.js">
+    </script>
+
+    <script>
+        $(document).ready(function () {
+
+            // On button click, get value
+            // of input control Show alert
+            // message box
+            $("#getValBtnID").click(function () {
+                var inputString = $("#userInputID").val();
+                alert(inputString);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h3 style="color:green">
+        GeeksForGeeks
+    </h3>
+
+    <b>JQuery val() Method</b>
+
+    <br><br>
+
+    <input type="text" id="userInputID">
+    <br><br>
+
+    <button type="button" id="getValBtnID">
+        Get Value
+    </button>
+</body>
+
+</html>

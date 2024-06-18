@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        How to limit character input
+        in the textarea including
+        count in jQuery?
+    </title>
+
+    <!-- Import jQuery cdn library -->
+    <script src="jquery-3.6.0.min.js">
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            var max_length = 15;
+            $('textarea').keyup(function () {
+                var len = max_length - $(this).val().length;
+                $('.GFG').text(len);
+            });
+
+        });
+    </script>
+</head>
+
+<body style="text-align: center;">
+    <h1 style="color: green;">
+        GeeksforGeeks
+    </h1>
+
+    <h3>
+        How to limit character input
+        in the textarea <br>including
+        count in jQuery?
+    </h3>
+
+    <form>
+
+<p>Maximum input characters: 15</p>
+
+
+        <textarea maxlength="15"></textarea>
+
+
+<p>
+            <span class="GFG">15</span>
+            Characters Remaining
+        </p>
+
+    </form>
+</body>
+
+</html>

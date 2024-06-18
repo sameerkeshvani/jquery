@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- jQuery -->
+    <script src="jquery-3.6.0.min.js">
+    </script>
+
+
+    <!-- Basic inline styling -->
+    <style>
+    body {
+        text-align: center;
+    }
+
+    h1 {
+        color: green;
+        font-size: 2.5rem;
+    }
+
+    img {
+        width: 200px;
+        height: 200px;
+    }
+    </style>
+</head>
+<body>
+    <h1>SSR COLLEGE</h1>
+    <img src="ssrcollege.png" />
+
+    <!-- Broken image -->
+    <img src="ssr.png" />
+
+    <img src="ssrcollege.png" />
+     <script type="text/javascript">
+    $("img").bind("error", function (e) {
+        var $this = $(this);
+        $(this).attr("src","college.jpg");
+    });
+    </script>
+</body>
+</html>

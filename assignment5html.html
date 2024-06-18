@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		p span {
+			text-decoration: underline;
+		}
+	</style>
+
+	<script src="jquery-3.6.0.min.js">
+	</script>
+</head>
+
+<body>
+	<h2>GeeksForGeeks</h2>
+
+	<h2>
+		How to underline all the words
+		of a text using jQuery?
+	</h2>
+
+	<p>
+		Geeks For Geeks. A computer
+		science portal for Geeks.
+	</p>
+
+	<script>
+		$(document).ready(function () {
+			$('p').each(function () {
+				var text_words =
+                    $(this).text().split(' ');
+
+                $(this).empty().html(function () {
+                    for (i = 0; i < text_words.length; i++) {
+                        if (i === 0) {
+                            $(this).append('<span>'
+                            + text_words[i] + '</span>');
+                        }
+                        else {
+                            $(this).append(' <span>'
+                            + text_words[i] + '</span>');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
